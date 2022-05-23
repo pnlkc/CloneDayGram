@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/frame_layout">
+
+    <ImageView
+        android:id="@+id/no_memo_image_view"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="27dp"
+        android:padding="3dp"
+        android:src="@drawable/no_memo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@drawable/bg_line"
+        android:orientation="horizontal"
+        android:id="@+id/linear_layout">
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_line"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/day_of_week_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_line_color"
+                android:text="월"
+                android:textSize="15sp"
+                android:textColor="@color/text"
+                android:fontFamily="@font/bm_hanna_air"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:paddingBottom="3dp"/>
+
+
+            <TextView
+                android:id="@+id/day_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="9dp"
+                android:text="20"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                android:fontFamily="@font/gmarketsansmedium"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/memo_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="여기에는 메모 내용이 들어가야함\n두번째 줄 내용입니다"
+            android:textSize="14sp"
+            android:textColor="@color/text"
+            android:fontFamily="@font/namyangju_medium"
+            android:lineSpacingExtra="6dp"
+            android:maxLines="2"
+            android:layout_margin="13dp" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

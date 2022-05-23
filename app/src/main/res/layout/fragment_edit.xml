@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="7dp"
+    android:background="@drawable/bg_line"
+    tools:context=".EditFragment">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2022년 12월 20일 화요일"
+        android:textSize="22sp"
+        android:textColor="@color/text"
+        android:fontFamily="@font/bm_euljiro"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/line_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"
+        android:paddingHorizontal="10dp"
+        />
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="0dp"
+        android:layout_height="1.5dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/title_text_view"
+        app:layout_constraintBottom_toTopOf="@id/memo_edit_text"
+        app:layout_constraintStart_toStartOf="@id/title_text_view"
+        app:layout_constraintEnd_toEndOf="@id/title_text_view"
+        android:layout_marginTop="20dp"
+        />
+
+    <com.example.mymemotwo.ClearFocusEditText
+        android:id="@+id/memo_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:fontFamily="@font/namyangju_medium"
+        android:gravity="start"
+        android:lineSpacingExtra="8dp"
+        android:padding="25dp"
+        android:textColor="@color/text"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_view"
+        tools:text="여기는 내용을 추가하는 자리입니다\n두번째줄\n세번째줄"
+        />
+
+    <ImageView
+        android:id="@+id/time_btn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_baseline_more_time_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="15dp" />
+
+    <ImageView
+        android:id="@+id/save_btn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_baseline_save_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="15dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
